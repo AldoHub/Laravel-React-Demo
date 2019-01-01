@@ -1,0 +1,253 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+/*
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+*/
+
+
+
+body {
+    background: #ee9ca7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #ffdde1, #ee9ca7); 
+   font-family: Raleway;
+   color: #111;
+   padding: 0;
+   margin: 0;
+}
+
+#App {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #ee9ca7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-box-shadow: 0px 10px 29px -13px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 10px 29px -13px rgba(0,0,0,0.75);
+box-shadow: 0px 10px 29px -13px rgba(0,0,0,0.75);
+   
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    padding: 10px 0px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1400px; 
+    background: #fff;
+    z-index: 99;
+   
+}
+nav ul {
+    padding: 0 10px;
+    margin: 0;
+ 
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    
+}
+
+
+nav ul li a{
+    text-decoration: none;
+    color: #111;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: bold;
+    
+}
+nav ul:first-of-type{
+    text-align: left;
+}
+nav ul:first-of-type li a {
+    
+    font-size: 1.5rem;
+    
+}
+nav ul:last-of-type{
+    text-align: right;
+}
+nav ul:last-of-type li{
+    margin: 0 10px;
+}
+
+header {
+    position: relative;
+    height: 600px;
+    background: url("https://images.unsplash.com/photo-1472849676747-48a51c0c30b6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dd42fb549d93256077cc5eec2c0b0058&auto=format&fit=crop&w=1350&q=80");
+    background-position: bottom;
+    background-size:100%; 
+}
+
+header div {
+    padding-top: 290px;
+    padding-left: 20px;
+    
+  
+}
+
+header div h1 {
+    font-size: 4.7rem;
+    line-height: 4.7rem;
+    margin: 0px;
+   color: #fff;
+   
+}
+
+header div p {
+    font-size: 2rem;
+    margin: 0px;
+    color: #fff;
+}
+
+.postsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top: 30px;
+    width: 95%;
+    margin: 30px auto;
+   padding-bottom: 40px;
+}
+
+.post {
+    -webkit-box-shadow: 0px 10px 29px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 29px -8px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 29px -8px rgba(0,0,0,0.75);
+padding: 20px 10px;
+
+}
+
+.post h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+.post a {
+    color: rgb(0, 58, 43);
+}
+
+.postContainer, #createPost{
+    margin: 50px auto 30px auto;
+    width: 50%;
+   
+    padding: 10px;
+    -webkit-box-shadow: 0px 10px 29px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 29px -13px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 29px -13px rgba(0,0,0,0.75);
+    border-radius: 10px;
+}
+
+
+form div.form-control {
+   
+    margin-bottom: 10px;
+}
+
+form div.form-control label {
+    display: block;
+    width: 93%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 10px auto;
+    padding: 0;
+    
+}
+
+
+input, textarea {
+    padding: 10px;
+    display: block;
+    width: 90%;
+    font-family: Raleway;
+    background: none;
+    border:none;
+    color: #111;
+    font-size: 1.3rem;
+    margin: 0 auto;
+    border:1px solid #fff
+}
+
+input[type="submit"]{
+    background: rgb(245, 188, 0);
+    border: none;
+    width: 50%;
+    color: #111;
+    font-weight: bold;
+    border-radius:4px;
+    cursor: pointer;
+}
+textarea {
+    height: 300px;
+    resize: none;
+}
+.postTitle {
+    font-size: 3rem;
+}
+
+.content {
+    border-bottom: 1px solid rgb(0, 167, 245);
+    padding-bottom: 40px;
+    white-space: pre-line;
+    margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.controls {
+    text-align: right;
+}
+.controls p {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.edit, .delete {
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+.edit {
+    background: rgb(0, 167, 245);
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    border:none;
+}
+
+.delete, .cancel {
+    color:rgb(0, 125, 241);
+    cursor: pointer;
+    border:none;
+    padding: 10px;
+    background: none;
+}
+.cancel {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1rem;
+    background: #eee;
+    border-radius: 4px;
+}
+button:disabled {
+    background: rgb(230, 248, 255);
+    color: #aaa;
+    cursor: context-menu;
+}
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+}
